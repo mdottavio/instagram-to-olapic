@@ -1,0 +1,22 @@
+
+{
+	"name": "Instagram to Olapic",
+	"description": "Send Instagram photos to you Streams",
+	"homepage_url": "http://www.olapic.com/",
+	"version": "0.1",
+	"manifest_version": 2,
+	// "icons": { "16": "olapic-16.png", "48": "olapic-48.png", "128": "olapic-128.png" },
+	"web_accessible_resources": ["olapic.png"],
+	"content_scripts": [
+		{	
+			"matches": ["http://www.instagram.com/*", "https://www.instagram.com/*"],
+			"js": [
+				// "jquery.js",
+				"js/main.js"
+			],
+			"run_at": "document_end"
+		}
+	],
+   "options_page": "html/options.html",
+   "version": "0.1"
+}
